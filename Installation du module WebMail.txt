@@ -1,0 +1,20 @@
+Pré-requis :
+
+1) Avoir RoundCube installé et configuré sur un serveur - module testé avec RoudCube 0.8.4
+
+2) Avoir la ou les boîtes mail à consulter via Dolibarr en IMAP (et non POP).
+
+3) Utiliser les thèmes par défaut de RoundCube : Classic ou Larry (ils sont modifiés par le module pour cacher l'arborescence complète des dossiers de la boîte mail dans la vue des tiers de Dolibarr. Tout autre thème affichera cette arborescence. Pour ne pas prendre de risque, supprimer du dossier /skin de RoundCube tout autre thème).
+
+
+Installation du module WebMail :
+
+1) Copier le contenu de l'archive dans votre répertoire dolibarr (ou htdocs)
+
+2) Activer et configurer le module webmail
+
+3) Autoriser l'utilisation du module aux utilisateurs Dolibarr (cf. accueil -> configuration -> utilisateurs et groupes : gérer les droits au niveau des personnes ou des groupes selon votre usage).
+
+4) Dans la configuration du module tiers ajouter un attribut supplémentaire "webmail" avec comme libellé "Dossier client dans le webmail", type "Chaine", longueur "255", Unique "Non", requis "Non"
+
+5) Renseigner le dossier webmail sur les fiches tiers : par exemple si le client "toto" est dans un dossier "Clients", lui-même dans la boîte de réception, il faudra saisir "Clients.toto". Attention, sur certaines configurations, c'est plutôt "Clients/toto". Vérifier l'url appelée en passant la souris sur le dossier "toto" dans RoundCube en webmail classique pour connaître le séparateur à utiliser.

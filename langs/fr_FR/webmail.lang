@@ -1,0 +1,10 @@
+# Dolibarr language file - fr_FR - webmail
+CHARSET=UTF-8
+
+Module140003Desc=Intégration Webmail
+WebMailSetup=Configuration du module Webmail
+WebMailType=Type de webmail
+WebMailTypeDetails=Pour l'instant, seul Roundcube est géré
+WebMailURL=URL du webmail
+WebMailURLDetails=Adresse web du webmail (ex: http://monserveur/roundcube)
+WebMailFolder=Dossier client dans le webmail
