@@ -1,3 +1,7 @@
+DEPRECATED MODULE TO INTEGRATE ROUDCUBE EMAILS INTO DOLIBARR
+
+------------------------------------------------------------
+
 Documentation d'utilisation du module Webmail pour Dolibarr
 
 **Sommaire**
