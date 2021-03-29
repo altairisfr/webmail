@@ -152,7 +152,7 @@ class modWebMail extends DolibarrModules
      *
      *	@return     int             1 if OK, 0 if KO
      */
-	function init()
+	function init($options = '')
   	{
 		global $db;
 		
@@ -173,7 +173,7 @@ class modWebMail extends DolibarrModules
 	 *
 	 *	@return     int             1 if OK, 0 if KO
  	 */
-	function remove()
+	function remove($options = '')
 	{
     	$sql = array();
 
