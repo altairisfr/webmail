@@ -80,9 +80,12 @@ class modWebMail extends DolibarrModules
 		// Constants
 		$this->const = array();			// List of particular constants to add when module is enabled
 
-		// Array to add new pages in new tabs
-		$this->tabs = array();
-		$this->tabs[0] = array('data'=>'thirdparty:+webmail@webmail:Emails:webmail@webmail:$conf->webmail->enabled && $user->rights->webmail->acces_tiers:/webmail/thirdpartyemails.php?socid=__ID__');
+		// New pages on tabs
+		$this->tabs = array(
+				'thirdparty:+webmail@webmail:Emails:webmail@webmail:$conf->webmail->enabled && $user->rights->webmail->acces_tiers:/webmail/tabs/thirdpartyEmails.php?socid=__ID__'
+//				,'product:-price',
+//				,'product:-suppliers'
+		);
 
 		// hooks
 		$this->module_parts = array(
