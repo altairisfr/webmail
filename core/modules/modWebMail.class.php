@@ -83,7 +83,6 @@ class modWebMail extends DolibarrModules
 		// Array to add new pages in new tabs
 		$this->tabs = array();
 		$this->tabs[0] = array('data'=>'thirdparty:+webmail@webmail:Emails:webmail@webmail:$conf->webmail->enabled && $user->rights->webmail->acces_tiers:/webmail/thirdpartyemails.php?socid=__ID__');
-		);
 
 		// hooks
 		$this->module_parts = array(
