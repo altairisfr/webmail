@@ -43,10 +43,10 @@ class modWebMail extends DolibarrModules
 		$this->numero = 140003;
 		// Key text used to identify module (for permissions, menus, etc...)
 		$this->rights_class = 'webmail';
-
 		// Family can be 'crm','financial','hr','projects','products','ecm','technic','other'
-		// It is used to group modules in module setup page
-		$this->family = "other";
+		$this->family = "interface";
+		// Module position in the family on 2 digits ('01', '10', '20', ...)
+		$this->module_position = '24';
 		// Module label (no space allowed), used if translation string 'ModuleXXXName' not found (where XXX is value of numeric property 'numero' of module)
 		$this->name = preg_replace('/^mod/i','',get_class($this));
 		// Module description, used if translation string 'ModuleXXXDesc' not found (where XXX is value of numeric property 'numero' of module)
@@ -162,6 +162,12 @@ class modWebMail extends DolibarrModules
 		$sql = array();
 
 		$result=$this->load_tables();
+		
+		// Create extrafields during init
+		include_once DOL_DOCUMENT_ROOT.'/core/class/extrafields.class.php';
+		$extrafields = new ExtraFields($this->db);
+		$result1=$extrafields->addExtraField('webmail', "webmail", 'varchar', 1, 255, 'thirdparty', 0, 0, '', '', 1, '', 3, 0, '', '', 'webmail@webmail', '$conf->webmail->enabled');
+
 
     	return $this->_init($sql);
   	}
